@@ -103,7 +103,7 @@ static bool hasPopulatedInstalledVMs;
     int firstSuitableVM = 0;
     if (config.minimumJVM != NULL) {
 	for (; firstSuitableVM < vms.size(); firstSuitableVM++) {
-	    if (vms[0].version() >= *config.minimumJVM) {
+	    if (vms[firstSuitableVM].version() >= *config.minimumJVM) {
 		break;
 	    }
 	}
@@ -113,7 +113,7 @@ static bool hasPopulatedInstalledVMs;
     int lastSuitableVM = vms.size() - 1;
     if (config.maximumJVM != NULL) {
 	for (; lastSuitableVM >= 0; lastSuitableVM--) {
-	    if (vms[0].version() <= *config.maximumJVM) {
+	    if (vms[lastSuitableVM].version() <= *config.maximumJVM) {
 		break;
 	    }
 	}
