@@ -1,0 +1,54 @@
+JavaLaunch
+Copyright (c) 2004, Garrick Toubassi
+
+Distributed under the terms of the MIT License (see below)
+
+JavaLaunch is yet another win32 java launcher (see http://tinyurl.com/5oave
+for several others).  The main goal of JavaLaunch is to create an executable
+which is driven entirely from an external configuration file, so you can
+simple rename the JavaLaunch.exe appropriately, and outfit it with an
+appropriate config file, and it will just work.  The config file allows you
+to specify the classpath, as well as command line flags to the VM and java
+mainclass.  The config file also does a certain amount of variable
+substitution.  The following variables are substituted:
+
+%INSTALLDIR% The directory that the launching exe was found.
+
+%APPNAME% The name of the launching app (minus the .exe extension).
+
+%APPDATADIR% This is essentially c:\Documents and Settings\username\
+Local Settings\Application Data\%APPNAME%.
+
+It also lets you specify requirements on the VM, such as a preferred VM
+version, a minimum version, and a maximum version.
+
+The main reasons for creating this new Java launcher are:
+
+1. Access to APPDATADIR as mentioned above.
+2. Ability to not have to "build" a new exe each time a release is made.
+3. Ability to work with native libraries (required by SWT).
+
+
+================================
+
+MIT License
+
+Copyright (c) 2004, Garrick Toubassi
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the "Software"),
+to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
